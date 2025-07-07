@@ -13,3 +13,19 @@ Installing collected packages: wcwidth, schema, pytz, pypika, pure-eval, ptyproc
 ## RAG Tool
 https://docs.crewai.com/en/tools/ai-ml/ragtool
 
+## Ollama
+### Server
+export OLLAMA_HOST=192.168.0.120:11434
+ollama serve
+
+### Client
+export OLLAMA_HOST=192.168.0.120:11434
+ollama query --host $OLLAMA_HOST "Your query here"
+
+- Server
+uv run rag_agent_server.py 
+uv run gaurdrail_server.py
+
+- Client
+python sequential_client.py 
+
